@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(64, 11, 69), rgb(40, 0, 58));
+}
+
+.form{
+    display: flex;
+    margin-top: 60px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(rgba(255, 115, 236, 0.993), rgb(159, 5, 198));
+    border: 2px solid #000;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.f2{
+    height: 300px;
+}
+
+.formHeading{
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.inputContainer{
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 44px;
+}
+
+.input{
+    margin-top: 16px;
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 500;
+    border:1px solid #000;
+    outline: none;
+    background: #fff;
+}
+
+.placeholder{
+    position: absolute;
+    left: 4px;
+    top: 21px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 200ms, color 200ms;
+    pointer-events: none;
+}
+
+.input:focus ~ .ph1,
+.input:not(:placeholder-shown) ~ .ph1{
+    transform: translateX(-5px) translateY(-20px) scale(0.8);
+    color: #232323;
+}
+
+.input:focus ~ .ph2,
+.input:not(:placeholder-shown) ~ .ph2{
+    transform: translateX(-4px) translateY(-20px) scale(0.8);
+    color: #232323;
+}
+
+.input:focus ~ .ph3,
+.input:not(:placeholder-shown) ~ .ph3{
+    transform: translateX(-9px) translateY(-20px) scale(0.8);
+    color: #232323;
+}
+
+.input:focus ~ .ph4,
+.input:not(:placeholder-shown) ~ .ph4{
+    transform: translateX(-17px) translateY(-21px) scale(0.8);
+    color: #232323;
+}
+
+.btn{
+    display: block;
+    cursor: pointer;
+    margin-top: 30px;
+    height: 42px;
+    width: 190px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+    background: #fff;
+    transition: all 200ms linear;
+    color: #000;
+    border:1px solid #000;
+}
+
+.btn2{
+    width: 150px;
+}
+
+.clicked{
+    transform: scale(0.85);
+}
+
+.error{
+    background: #f71f1f;
+}
+
+a{
+    margin-top: 3px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+

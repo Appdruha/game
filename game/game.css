@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(64, 11, 69), rgb(40, 0, 58));
+}
+
+.game{
+    top: 30px;
+    position: relative;
+    margin: auto;
+    width: 600px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+.gameParallax{
+    position: absolute;
+    background-image: url(img/bg1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    transition: all 0.1s ease;
+}
+
+
+.score{
+    position: absolute;
+    right: 70px;
+    top: 60px;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    color: #11180b;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:xx-large;
+    font-weight: 600;
+    border-radius: 5px;
+    background: linear-gradient(rgba(255, 115, 236, 0.993), rgb(159, 5, 198));
+    border: 2px solid #000;
+}
+
+#cube{
+    width: 45px;
+    height: 45px;
+    display: block;
+    background: radial-gradient(rgb(8, 229, 249), rgb(144, 0, 255));
+    border: 1px solid #000;
+    position: relative;
+    top: 154px;
+    left: 55px;
+}
+
+#obstacleWrap{
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-bottom: 54px solid rgb(120, 15, 180);
+    position: relative;
+    top: 100px;
+    left: 576px;
+}
+
+#obstacle{
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(11, 155, 244);
+    position: relative;
+    top: 3px;
+    right: 25px;
+}
+
+.started{
+    animation: obstacleMov 2s infinite linear;
+}
+
+.btn{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: #11180b;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:x-large;
+    font-weight: 500;
+    border-radius: 5px;
+    background: linear-gradient(rgba(255, 115, 236, 0.993), rgb(159, 5, 198));
+    transition: all 0.2s linear;
+}
+
+.clicked{
+    transform: scale(0.8);
+}
+
+@keyframes obstacleMov {
+    0%{
+        left: 550px
+    }
+    100%{
+        left: -20px
+    }
+}
+
+.jump{
+    animation: jump 0.8s  linear;
+}
+
+@keyframes jump {
+    0%{
+        top: 155px;
+    }
+   
+    50%{
+        top: 70px;
+    }
+   
+    100%{
+        top: 155px;
+        transform: rotate(90deg);
+    }
+}
+
+.leaders{
+    pointer-events: none;
+    display: block;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 30px;
+    width: 500px;
+    height: 340px;
+    color: #11180b;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: 600;
+    border-radius: 5px;
+    background: linear-gradient(rgba(255, 115, 236, 0.993), rgb(159, 5, 198));
+}
+
+.leaders>ol{
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+.leadersHeadeing{
+    text-align: center;
+    font-size: 32px;
+}
+
+@media(max-width: 1024px) {
+    .container{
+        height: 110vh;
+    }
+}
+
+@media(max-width: 760px) {
+    .container{
+        display: flex;
+        height: 110vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .game{
+        top: 10px;
+        margin: 0 auto;
+        scale: 0.9;
+    }
+    
+    .gameParallax{
+        transition: none;
+    }
+
+    .btn{
+        margin-top: 20px;
+    }
+
+    .leaders{
+        margin-top: 0px;
+        width: 320px;
+    }
+}
+
+@media(max-width: 600px) {
+    .container{
+        display: flex;
+        height: 110vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .game{
+        top: 10px;
+        width: 100%;
+        margin: 0 auto; 
+    }
+    
+    .gameParallax{
+        transition: none;
+    }
+
+    .leaders{
+        margin-top:-100px;
+        width: 315px;
+        height: fit-content;
+    }
+}
+
+
+
